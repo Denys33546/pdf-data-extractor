@@ -1,0 +1,7 @@
+services:
+  extractor:
+    build: .
+    volumes:
+      - ./samples:/data/in:ro
+      - ./output:/data/out
+    command: ["/data/in", "-o", "/data/out/report.xlsx"]
